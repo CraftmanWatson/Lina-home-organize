@@ -31,6 +31,7 @@ body {
 }
 .header-container .logo {
     height: 80px;
+    border-radius: 50px;
 }
 
 .header-container .nav-btn {
@@ -103,8 +104,15 @@ body {
     background: rgba(0,0,0,0.05);
     margin-top: 100px;
 }
+.about-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    background: url(lina-logo.jpg);
+    background-size: cover;
+}
 .about-content {
-    width: 60%;
+    width: 400px;
     text-align: justify;
     margin-right: 20px;
 }
@@ -483,10 +491,10 @@ body {
     margin: 0 auto;
     cursor: grab;
     user-select: none;
-    display: flex;             /* Membuat card berjejer ke samping */
-    overflow-x: auto;          /* Mengaktifkan scroll horizontal jika kontennya meluber */
-    white-space: nowrap;       /* Mencegah card turun ke bawah */
-    cursor: grab;              /* Mengubah cursor menjadi tangan agar user tahu bisa di-drag */
+    display: flex;          
+    overflow-x: auto;      
+    white-space: nowrap;  
+    cursor: grab;        
     -webkit-overflow-scrolling: touch;
 }
 .catalogue-aisles-cards-group:active {
@@ -515,21 +523,20 @@ body {
 .products1-cards-group, .products2-cards-group, .products3-cards-group, .products4-cards-group {
     display: flex;
     flex-shrink: 0;
-    overflow-x: auto; /* Fokus ke scroll horizontal */
+    overflow-x: auto; 
     overflow-y: hidden;
     gap: 20px;
     width: max-content;
     max-width: 100%;
     margin: 0 auto; 
-    padding: 10px 0; /* Beri sedikit napas vertikal */
+    padding: 10px 0;
 }
 
 .products1-card, .products2-card, .products3-card, .products4-card {
-    flex: 0 0 220px; /* Gunakan flex shorthand agar lebar kartu stabil di desktop/mobile */
-    min-height: 340px; /* Pakai min-height agar tombol Buy Now tidak jebol ke bawah */
+    flex: 0 0 220px; 
+    min-height: 340px; 
     background: var(--product-color);
     border: 1px solid #ccc;
-    /* margin: 0 auto; <-- HAPUS BARIS INI karena merusak flexbox item */
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -689,8 +696,8 @@ body {
         display: none;
     }
     .about {
-        justify-content: center;
-
+        flex-direction: column;
+        align-items: center;
     }
     .about-content {
         width: 70%;
@@ -727,18 +734,18 @@ body {
     }
     .testimonial-cards-group {
     display: flex;
-    flex-direction: column;   /* 1. Mengubah susunan kartu jadi berderet ke bawah */
-    width: 100%;              /* 2. Reset dari 'max-content' milik desktop */
+    flex-direction: column;  
+    width: 100%;          
     overflow-x: hidden;
-    gap: 20px;                /* 3. Memberikan jarak antar kartu yang konsisten */
+    gap: 20px;            
 }
 
 .testimonial-card {
     width: 100%;
-    min-width: 0;             /* 4. Reset 'min-width: 350px' dari desktop agar muat di HP kecil */
-    height: auto;             /* 5. KUNCI UTAMA: Biar tinggi kartu fleksibel mengikuti panjang teks */
+    min-width: 0;        
+    height: auto;             
     padding: 20px;            
-    box-sizing: border-box;   /* 6. Memastikan padding tidak merusak/membuat lebar kartu melar */
+    box-sizing: border-box;   
 }
 
     .testimonial-card {
@@ -768,7 +775,7 @@ body {
     }
     .products1-cards-group, .products2-cards-group, .products3-cards-group, .products4-cards-group {
     display: flex;
-    justify-content: flex-start; /* WAJIB TAMBAH INI: Memaksa produk mulai dari ujung kiri */
+    justify-content: flex-start; 
     overflow-x: auto;          
     overflow-y: hidden;        
     gap: 20px;
@@ -779,31 +786,30 @@ body {
 }
 
 .products1-card, .products2-card, .products3-card, .products4-card {
-    flex: 0 0 220px;           /* KUNCI UTAMA: Supaya kartu TIDAK mengkerut/gepeng saat di-scroll */
-    min-height: 340px;         /* Gunakan MIN-HEIGHT (bukan height tetap), agar kartu bisa memanjang otomatis mengikuti isi konten */
+    flex: 0 0 220px;           
+    min-height: 340px;         
     background: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 12px;             /* Tambahkan padding dalam kartu biar konten tidak menempel ke tepi abu-abu */
-          /* Sedikit sentuhan rounded biar makin aesthetic premium */
-    scroll-snap-align: start;  /* Pasangan dari scroll-snap-type di atas */
+    padding: 12px;            
+    scroll-snap-align: start;  
 }
 
 .product1-img, .product2-img, .product3-img, .product4-img {
     height: 200px;
-    width: 100%;               /* Otomatis memenuhi lebar kartu (200px bersih setelah dipotong padding) */
-    object-fit: cover;         /* Biar kalau Lina pakai foto persegi/persegi panjang, gambarnya gak ketarik atau gepeng */
-    border-radius: 8px;        /* Sudut gambar dibikin rounded dikit biar rapi */
+    width: 100%;               
+    object-fit: cover;         
+    border-radius: 8px;        
 }
 
 .product1-rating, .product2-rating, .product3-rating, .product4-rating {
     font-size: 0.9rem;
-    margin: 10px 0px 5px 0px;  /* Sesuaikan margin agar jaraknya ideal */
+    margin: 10px 0px 5px 0px;  
 }
 
 .product1-name, .product2-name, .product3-name, .product4-name {
-    font-size: 18px;           /* Ukuran font sedikit disesuaikan untuk layar mobile */
+    font-size: 18px;           
     font-weight: bold;
 }
     
