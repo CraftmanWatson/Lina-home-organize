@@ -1,0 +1,810 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: white;
+    --bg-color: white;
+}
+
+body {
+    margin: 0px;
+    font-family: "Pliant";
+    color: var(--primary-color);
+    background: var(--bg-color)
+}
+
+.header {
+    background-color: var(--bg-color);
+    padding: 20px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+.header-container {
+    margin: 2px auto;
+    margin: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-container .logo {
+    height: 80px;
+}
+
+.header-container .nav-btn {
+    visibility: hidden;
+}
+.header-container .nav-screen ul {
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+}
+.header-container .nav-screen ul li {
+    padding: 5px 5px;
+    font-family: "Pliant";
+    transition: 0.3s ease;
+    cursor: pointer;
+    bottom: 0;
+    position: relative;
+}
+.header-container .nav-screen ul li:hover {
+    bottom: 5px;
+}
+.hero {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 130px;
+}
+.hero-content {
+    width: 50%;
+}
+.hero-content .hero-headline {
+    font-size: 50px;
+    font-family: "Pliant";
+    margin: 3px;
+}
+.hero-content .hero-subline {
+    font-size: 1rem;
+    font-family: "Pliant";
+    width: 80%;
+}
+.hero-img {
+    width: 400px;
+    height: 250px;
+    background: url(hero-img.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.hero-content .hero-cta {
+    background: none;
+    color: var(--primary-color);
+    font-family: "Pliant";
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 1px solid var(--primary-color);
+    margin-top: 10px;
+}
+.hero-content .hero-cta:hover {
+        background: var(--primary-color);
+        cursor: pointer;
+        transition: 0.3s ease;
+        color: var(--secondary-color);
+}
+.about {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 0px;
+    background: rgba(0,0,0,0.05);
+    margin-top: 100px;
+}
+.about-content {
+    width: 60%;
+    text-align: justify;
+    margin-right: 20px;
+}
+.about-content .about-headline {
+    font-size: 2rem;
+    font-family: "Pliant";
+    margin: 4px 0px;
+    text-align: center;
+}
+.about-content .about-subline {
+    font-size: 1rem;
+    font-family: "Pliant";
+    margin: 8px 0px;
+}
+.catalogue {
+    margin: 30px;
+    margin-top: 100px;
+}
+.catalogue .catalogue-headline {
+    font-family: "Pliant";
+    text-align: center;
+    font-size: 2rem;
+}
+.catalogue-cards-group {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    overflow: auto;
+    flex-shrink: 0;
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto;
+    cursor: grab;
+    user-select: none;
+}
+.catalogue-cards-group:active {
+    cursor: grabbing;
+}
+.catalogue .catalogue-card1 {
+    min-width: 300px;
+    height: 200px;
+    background: url(catalog1.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    color: white;
+    font-family: "Pliant";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 0px;
+}
+.catalogue .catalogue-card2 {
+    min-width: 300px;
+    height: 200px;
+    background: url(catalog2.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    color: white;
+    font-family: "Pliant";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 0px;
+}
+.catalogue .catalogue-card3 {
+    min-width: 300px;
+    height: 200px;
+    background: url(catalog3.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    color: white;
+    font-family: "Pliant";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 0px;
+}
+.catalogue .catalogue-card4 {
+    min-width: 300px;
+    height: 200px;
+    background: url(catalog4.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    color: white;
+    font-family: "Pliant";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 0px;
+}
+.catalogue .catalogue-card:hover {
+    transition: 0.3s ease;
+    scale: 0.98;
+}
+.catalogue-headline-card {
+    width: 100px;
+    padding: 0px 20px;
+    height: 200px;
+    font-family: "Pliant";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.portfolio {
+    margin: 30px;
+    margin-top: 100px;
+}
+.portfolio-headline {
+    font-family: "Pliant";
+    text-align: center;
+    font-size: 2rem;
+}
+.portfolio .portfolio-cards-group {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    gap: 20px;
+    flex-shrink: 0;
+    overflow-x: auto;
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.portfolio .portfolio-card {
+    min-width: 300px;
+    height: 250px;
+    border-radius: 20px;
+    background: black;
+}
+
+.portfolio-card .portfolio-img {
+    width: 100%;
+    height: 200px;
+    background: black;
+    border-radius: 20px 20px 0px 0px;
+}
+.portfolio-card .portfolio-cta {
+    border: 1px solid var(--primary-color);
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+} 
+
+.testimonial {
+    margin: 60px;
+    margin-top: 100px;
+}
+.testimonial-headline {
+    text-align: center;
+    font-family: "Pliant";
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+.testimonial-cards-group {
+    margin: 30px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    flex-shrink: 0;
+    overflow-x: auto;
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.testimonial-card {
+    height: 330px;
+    min-width: 350px;
+    max-width: 550px;
+    background: rgba(0,0,0,0.1);
+    padding: 30px;
+}
+.testimonial-card .user-pfp1 {
+    height: 80px;
+    width: 80px;
+    background: url(sarah.png);
+    background-size: cover;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+.testimonial-card .user-pfp2 {
+    height: 80px;
+    width: 80px;
+    background: url(james.png);
+    background-size: cover;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+.testimonial-card .user-pfp3 {
+    height: 80px;
+    width: 80px;
+    background: url(maya.png);
+    background-size: cover;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+.testimonial-card .user-name {
+    font-family: "Pliant";
+    text-align: center;
+    margin-top: 10px;
+}
+.testimonial-card .user-feedback {
+    text-align: justify;
+    font-family: "Pliant";
+}
+.testimonial-card .user-rating {
+    text-align: center;
+    padding: 10px;
+}
+.services {
+    margin: 30px;
+    margin-top: 100px;
+}
+.services-headline {
+    text-align: center;
+    font-family: "Pliant";
+    font-size: 2rem;
+}
+.services-cards-group {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-shrink: 0;
+    overflow-x: auto;
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.services-card {
+    height: auto;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(0,0,0,0.02);
+    flex-shrink: 0;
+}
+.services-img {
+    text-align: center;
+    margin: 30px 0px;
+    background: lightblue;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    font-size: 20px;
+    margin: 0 auto;
+}
+.services-name {
+    text-align: center;
+    font-family: 'Pliant';
+    font-size: 25px;
+    margin: 10px;
+    letter-spacing: 0px;
+}
+.services-description {
+    text-align: justify;
+    font-family: "Pliant";
+    line-height: 1.6;
+    padding-bottom: 20px;
+}
+.services-cta {
+    font-family: "Pliant";
+    text-align: center;
+    padding: 20px 0px;
+    background: none;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+.services-cta:hover {
+    background: none;
+    border: 1px solid var(--secondary-color);
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    transition: 0.3s ease;
+}
+.footer {
+    width: 100%;
+    margin: 0px;
+    background: #1a1a1a;
+    border: 1px solid transparent;
+    margin-top: 100px;
+    border: 1px solid #1a1a1a;
+}
+.footer-column-card-group {
+    margin: 30px 60px;
+    color: white;
+    font-family: "Pliant";
+    letter-spacing: 1px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.footer-social-column-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100px;
+    gap: 20px;
+    font-size: 20px;
+}
+.footer-column-card {
+    width: 350px;
+    
+}
+.footer-copyright-card {
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+.catalogue-cards-group,
+.portfolio-cards-group,
+.services-cards-group,
+.testimonial-cards-group {
+    cursor: grab;
+    user-select: none;
+}
+
+.catalogue-cards-group:active,
+.portfolio-cards-group:active,
+.services-cards-group:active,
+.testimonial-cards-group:active {
+    cursor: grabbing;
+}
+
+.catalogue-cards-group::-webkit-scrollbar,
+.portfolio-cards-group::-webkit-scrollbar,
+.testimonial-cards-group::-webkit-scrollbar,
+.services-cards-group::-webkit-scrollbar,
+.catalogue-aisles-cards-group {
+    display: none;
+}
+
+.catalogue-cards-group,
+.portfolio-cards-group,
+.testimonial-cards-group,
+.services-cards-group,
+.catalogue-aisles-cards-group {
+    scrollbar-width: none; 
+}
+.catalogue-aisles {
+    margin: 30px;
+    margin-top: 100px;
+}
+.catalogue-aisles-cards-group {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    overflow: auto;
+    flex-shrink: 0;
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto;
+    cursor: grab;
+    user-select: none;
+    display: flex;             /* Membuat card berjejer ke samping */
+    overflow-x: auto;          /* Mengaktifkan scroll horizontal jika kontennya meluber */
+    white-space: nowrap;       /* Mencegah card turun ke bawah */
+    cursor: grab;              /* Mengubah cursor menjadi tangan agar user tahu bisa di-drag */
+    -webkit-overflow-scrolling: touch;
+}
+.catalogue-aisles-cards-group:active {
+    cursor: grabbing;
+}
+.catalogue-aisles-cards-group .catalogue-card {
+     min-width: 300px;
+    height: 200px;
+    background: black;
+    border-radius: 20px;
+    color: white;
+    font-family: "Pliant";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 0px;
+}
+
+.products1, .products2, .products3, .products4 {
+    margin: 30px;
+}
+
+.products1-cards-group, .products2-cards-group, .products3-cards-group, .products4-cards-group {
+    display: flex;
+    flex-shrink: 0;
+    overflow-x: auto; /* Fokus ke scroll horizontal */
+    overflow-y: hidden;
+    gap: 20px;
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto; 
+    padding: 10px 0; /* Beri sedikit napas vertikal */
+}
+
+.products1-card, .products2-card, .products3-card, .products4-card {
+    flex: 0 0 220px; /* Gunakan flex shorthand agar lebar kartu stabil di desktop/mobile */
+    min-height: 340px; /* Pakai min-height agar tombol Buy Now tidak jebol ke bawah */
+    background: var(--product-color);
+    border: 1px solid #ccc;
+    /* margin: 0 auto; <-- HAPUS BARIS INI karena merusak flexbox item */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+}
+.product1-img, .product2-img, .product3-img, .product4-img {
+    width: 100%;
+    height: 150px;
+    background: white;
+}
+.product1-rating, .product2-rating, .product3-rating, .product4-rating {
+    margin: 5px 0px;
+    font-size: 10px;
+    color: yellow;
+}
+.product1-name, .product2-name, .product3-name, .product4-name {
+    font-family: 'Pliant';
+    color: var(--primary-color);
+}
+.product1-cta, .product2-cta, .product3-cta, .product4-cta {
+    padding: 10px 0px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+    border: none;
+}
+.product1-cta:hover {
+    transition: 0.3s ease;
+    background: none;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+.product2-cta:hover {
+    transition: 0.3s ease;
+    background: none;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+.product3-cta:hover {
+    transition: 0.3s ease;
+    background: none;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+.product4-cta:hover {
+    transition: 0.3s ease;
+    background: none;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+.product1-headline, .product2-headline, .product3-headline, .product4-headline {
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 7px;
+        z-index: 100;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+    }
+    .header-container .nav-btn {
+        visibility: visible;
+        cursor: pointer;
+        z-index: 100;
+    }
+    .header-container .nav-screen {
+        position: fixed;
+        top: 90px;
+        left: 0px;
+        background: var(--bg-color);
+        width: 100%;
+        height: 100vh;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease;
+        z-index: 100;
+    }
+    .header-container .nav-screen.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .header-container .nav-screen ul {
+        flex-direction: column;
+        width: 90vw;
+        gap: 0px;
+    }
+    .header-container .nav-screen ul li {
+        border-bottom: 0.5px solid rgba(0,0,0,0.3);
+        padding: 30px 0px;
+    }
+    .header-container .nav-btn {
+        height: 50px;
+        width: 70px;
+        background: none;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .header-container .nav-btn .bar-1 {
+        width: 100%;
+        height: 5%;
+        background: var(--primary-color);
+        transition: 0.3s ease;
+    }
+    .header-container .nav-btn .bar-2 {
+        width: 100%;
+        height: 5%;
+        background: var(--primary-color);
+        transition: 0.3s ease;
+    }
+    .header-container .nav-btn .bar-3 {
+        width: 100%;
+        height: 5%;
+        background: var(--primary-color);
+        transition: 0.3s ease;
+    }
+    .header-container .nav-btn.cross .bar-1 {
+        transform: rotate(40deg)translate(14px, 18px);
+    }
+    .header-container .nav-btn.cross .bar-3 {
+        transform: rotate(-40deg)translate(14px, -18px);
+    }
+    .header-container .nav-btn.cross .bar-2 {
+        opacity: 0;
+    }
+    .hero {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        margin-top: 120px;
+        padding-bottom: 40px;
+    }
+    .hero-content {
+        width: 90%;
+    }
+    .hero-content .hero-cta {
+        font-size: 25px;
+        margin-top: 30px;
+        border: 1px solid var(--primary-color);
+    }
+    
+    .hero-content .hero-headline {
+        font-size: 3.5rem;
+        margin: 4px 0px;
+        letter-spacing: 0.5px;
+        font-weight: bold;
+    }
+    .hero-content .hero-subline {
+        width: 80%;
+        margin: 10px 0px;
+    }
+    .hero .hero-img {
+        display: none;
+    }
+    .about {
+        justify-content: center;
+
+    }
+    .about-content {
+        width: 70%;
+        margin-right: 0px;
+
+    }
+    
+    .catalogue-cards-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    .catalogue-cards-group .catalogue-card {
+        width: 100%;
+        height: 300px;
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+    .portfolio .portfolio-cards-group {
+        flex-direction: column;
+        display: flex;
+        overflow: hidden;
+        gap: 40px;
+        width: 100%;
+    }
+    .portfolio .portfolio-card {
+        width: 100%;
+        height: 300px;
+    }
+    .portfolio .portfolio-img {
+        height: 250px;
+    }
+    .portfolio .portfolio-cta {
+        height: 50px;
+    }
+    .testimonial-cards-group {
+    display: flex;
+    flex-direction: column;   /* 1. Mengubah susunan kartu jadi berderet ke bawah */
+    width: 100%;              /* 2. Reset dari 'max-content' milik desktop */
+    overflow-x: hidden;
+    gap: 20px;                /* 3. Memberikan jarak antar kartu yang konsisten */
+}
+
+.testimonial-card {
+    width: 100%;
+    min-width: 0;             /* 4. Reset 'min-width: 350px' dari desktop agar muat di HP kecil */
+    height: auto;             /* 5. KUNCI UTAMA: Biar tinggi kartu fleksibel mengikuti panjang teks */
+    padding: 20px;            
+    box-sizing: border-box;   /* 6. Memastikan padding tidak merusak/membuat lebar kartu melar */
+}
+
+    .testimonial-card {
+        width: 100%;
+        padding: 15px;
+    }
+    .services-cards-group {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 15px;
+    }
+    .services-card {
+        width: 250px;
+        height: 350px;
+    }
+    
+    .footer-column-card-group {
+        flex-direction: column;
+    }
+    .footer-column-card {
+        width: 100%;
+    }
+    .footer-social-column-card {
+        flex-direction: row;
+        width: 100%;
+        gap: 40px;
+    }
+    .products1-cards-group, .products2-cards-group, .products3-cards-group, .products4-cards-group {
+    display: flex;
+    justify-content: flex-start; /* WAJIB TAMBAH INI: Memaksa produk mulai dari ujung kiri */
+    overflow-x: auto;          
+    overflow-y: hidden;        
+    gap: 20px;
+    width: 100%;               
+    padding: 10px 15px;        
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch; 
+}
+
+.products1-card, .products2-card, .products3-card, .products4-card {
+    flex: 0 0 220px;           /* KUNCI UTAMA: Supaya kartu TIDAK mengkerut/gepeng saat di-scroll */
+    min-height: 340px;         /* Gunakan MIN-HEIGHT (bukan height tetap), agar kartu bisa memanjang otomatis mengikuti isi konten */
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px;             /* Tambahkan padding dalam kartu biar konten tidak menempel ke tepi abu-abu */
+          /* Sedikit sentuhan rounded biar makin aesthetic premium */
+    scroll-snap-align: start;  /* Pasangan dari scroll-snap-type di atas */
+}
+
+.product1-img, .product2-img, .product3-img, .product4-img {
+    height: 200px;
+    width: 100%;               /* Otomatis memenuhi lebar kartu (200px bersih setelah dipotong padding) */
+    object-fit: cover;         /* Biar kalau Lina pakai foto persegi/persegi panjang, gambarnya gak ketarik atau gepeng */
+    border-radius: 8px;        /* Sudut gambar dibikin rounded dikit biar rapi */
+}
+
+.product1-rating, .product2-rating, .product3-rating, .product4-rating {
+    font-size: 0.9rem;
+    margin: 10px 0px 5px 0px;  /* Sesuaikan margin agar jaraknya ideal */
+}
+
+.product1-name, .product2-name, .product3-name, .product4-name {
+    font-size: 18px;           /* Ukuran font sedikit disesuaikan untuk layar mobile */
+    font-weight: bold;
+}
+    
+}
